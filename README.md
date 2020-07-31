@@ -8,4 +8,4 @@ A Flutter application that lets users vent and rant.
 
 ## TODO
 - Add project code.
-- A dd contributer.
+- Add contributer.
