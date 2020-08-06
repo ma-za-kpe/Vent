@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class SignUpScreen extends StatelessWidget {
+class SignScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +30,7 @@ class SignUpScreen extends StatelessWidget {
               GestureDetector(
                 onTap: () => print("Signed up"),
                 child: Text(
-                g  ' Lo Up ',
+                  ' Sign Up ',
                   style: TextStyle(
                     color: Color(0xff930000),
                   ),
