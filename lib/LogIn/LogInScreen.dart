@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class LogInScreen extends StatelessWidget {
+  static final route = "login";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,7 +11,7 @@ class LogInScreen extends StatelessWidget {
         children: <Widget>[
           Text(
             "Login",
-            style: TextStyle(fontSize: 40, fontWeight: FontWeight.w600),
+            style: TextStyle(fontSize: 72, fontWeight: FontWeight.w600),
           ),
           GestureDetector(
             onTap: () => print("Signed with Google"),
@@ -23,12 +24,17 @@ class LogInScreen extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text('Don\'t have an account'),
+              Text(
+                'Don\'t have an account',
+                style: TextStyle(fontSize: 18),
+              ),
               SizedBox(
                 width: 20,
               ),
               GestureDetector(
-                onTap: () => print("Signed up"),
+                onTap: () => Navigator.pushNamed(
+                  context,
+                ),
                 child: Text(
                   ' Sign Up ',
                   style: TextStyle(
