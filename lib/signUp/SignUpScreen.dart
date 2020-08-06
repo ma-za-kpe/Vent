@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SignUpScreen extends StatelessWidget {
+  static final route = "signup";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,9 +29,9 @@ class SignUpScreen extends StatelessWidget {
                 width: 20,
               ),
               GestureDetector(
-                onTap: () => print("Signed up"),
+                onTap: () => Navigator.pop(context),
                 child: Text(
-                g  ' Lo Up ',
+                 ' Log In ',
                   style: TextStyle(
                     color: Color(0xff930000),
                   ),

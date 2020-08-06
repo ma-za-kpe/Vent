@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:vent_app/signUp/SignUpScreen.dart';
 
 class LogInScreen extends StatelessWidget {
   static final route = "login";
@@ -24,17 +25,12 @@ class LogInScreen extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text(
-                'Don\'t have an account',
-                style: TextStyle(fontSize: 18),
-              ),
+              Text('Don\'t have an account' ,style: TextStyle(fontSize: 18),),
               SizedBox(
                 width: 20,
               ),
               GestureDetector(
-                onTap: () => Navigator.pushNamed(
-                  context,
-                ),
+                onTap: () => Navigator.pushNamed(context,SignUpScreen.route),
                 child: Text(
                   ' Sign Up ',
                   style: TextStyle(

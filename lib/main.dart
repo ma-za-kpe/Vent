@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:vent_app/signUp/SignUpScreen.dart';
 import 'LogIn/LogInScreen.dart';
 
 void main() {
@@ -18,6 +19,9 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: LogInScreen(),
+      routes: {
+        SignUpScreen.route: (context)=> SignUpScreen()
+      },
     );
   }
 }
