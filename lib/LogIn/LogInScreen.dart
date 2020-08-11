@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:vent_app/Home/home.dart';
 import 'package:vent_app/signUp/SignUpScreen.dart';
 
 class LogInScreen extends StatelessWidget {
@@ -15,7 +16,9 @@ class LogInScreen extends StatelessWidget {
             style: TextStyle(fontSize: 72, fontWeight: FontWeight.w600),
           ),
           GestureDetector(
-            onTap: () => print("Signed with Google"),
+            onTap: () => {
+              navigateToHomeScreen(context),
+            },
             child: Icon(
               FontAwesomeIcons.googlePlus,
               color: Color(0xffDC4E41),
@@ -25,22 +28,47 @@ class LogInScreen extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text('Don\'t have an account' ,style: TextStyle(fontSize: 18),),
+              Text(
+                'Don\'t have an account?',
+                style: TextStyle(fontSize: 18),
+              ),
               SizedBox(
                 width: 20,
               ),
-              GestureDetector(
-                onTap: () => Navigator.pushNamed(context,SignUpScreen.route),
+              FlatButton(
+                color: Color(0xffDC4E41),
+                onPressed: () {
+                  navigateToSignUpScreen(context);
+                },
                 child: Text(
                   ' Sign Up ',
                   style: TextStyle(
-                    color: Color(0xff930000),
+                    fontSize: 20.0,
+                    color: Colors.white,
                   ),
                 ),
               )
             ],
           )
         ],
+      ),
+    );
+  }
+
+  navigateToSignUpScreen(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => SignUpScreen(),
+      ),
+    );
+  }
+
+  navigateToHomeScreen(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => MyHome(),
       ),
     );
   }
